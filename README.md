@@ -13,6 +13,11 @@ Kaggle has roughly 30% of the entire dataset (~22 GB) which is currently used
 for training the model.Entire dataset can be found at Lyft L5 official site, 
 which is around 71 GB
 
+### Folders in Dataset
+1. Aerial map- aerial_map.png
+2. scenes - sanple.zarr, train.zarr, test.zarr, validate.zarr
+3. semantic map - semantic_map.pb
+
 ## Lyft l5kit library
 [# l5kit library](https://github.com/lyft/l5kit)
 1. Library containing APIs to handle Lyft datasets
@@ -20,3 +25,21 @@ which is around 71 GB
    and many visualisation features
 3. Currently two examples - visualisation and sample submission notebooks are 
    part of github repo to help get started
+
+
+## lyft-kaggle-visualisation.ipynb
+
+Main packages in l5kit 
+1. Rasterisation (convert .zarr files to multi channel tensors, images for visualisation)
+   Each class contains atleast two functions - rasterise, to_rgb
+
+2. Visualisation - contains utilites for drawing on RGB images
+
+3. Dataset - EgoDataset and AgentDataset classes to covnert rasterised images to multi-
+   channel images
+
+Here Zarr dataset contains 
+1. frames - timestamp, some id, ego translation and rotation info
+2. agents - centroid, extent, yaw, velocity, trackid, label_probabilities
+3. scenes 
+4. tl-faces 
