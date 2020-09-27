@@ -1,0 +1,61 @@
+Sno,Kernel name,Author,Idea of kernel
+1,Multi Mode Models Ensemble,Akash G,1. Ensemble of the top 3 kaggle public scores
+2,TPU Resnet18,Manh Lab,"1. Installs l5kit library from scratch using pip
+2. Using modified version of examples from l5kit library
+3. Modified resnet model used to predict output
+4. Needs TPU to run"
+3,Pytorch implementation,manavspg2,"1. Simple pytorch model using resnet, but modifying the input and output layers to suit target 
+2. convert the test output to csv and writing "
+4,timestamps in lyft dataset,Snihyr Kostiantin,"1. Wrote custom function to read timestamps from sample dataset
+2. not much useful"
+5,notebook4ddce60136,Behrous ,Nothing
+6,moving object detection,Rajaram ekambaram,
+7,"lift-visualiser-trajectoire-v-hicule-autonome, notebooke938991794",Tabout MHamed,
+8,10000 step resnet50 pytorch-lightning train + eval,Jiayu,"1. Reads data from zarr files and wrote a class for loading test, train, validation and sample sets
+2. Trained simple Resnet50 model to give output"
+9,l5kit EDA,Jiayu,"1. Install l5kit library
+2. Read in sample, train, val and test sets using ChunkedDataset class
+3. Create df from scenes, frames, agents, tl faces categories of sample dataset and displaying different value counts "
+10,Installing l5kit offline,Paulo Pinto,"1. Installing l5kit library terminal command
+2. Displaying simple visualisation from sample dataset"
+11,Pytorch baseline -Inference,Shri Gopalakrishnan Kumar,"1. Based on Peter's Pytorch baseline train and inference
+2. Basic training and inference using resnet18 model 
+3. writing predicted outptut to csv"
+12,pyplot,zzy,"1. Reads training dataset
+2. use pyplot to plot sequences of training set
+3. important to understand dataset"
+13,semData,n3n7i,"1. Uses Nelsa package
+2. defines own set of classes to view semantic data but cannot understand output or intent
+3. most of code is commented and has no upvote"
+14,Autonomous Motion Predictor 1,Salman Ibne Eunus,"1. example of multi model submission and csv fie format
+2. Just put the predicted output file in public, not its training methods"
+15,Combining Lyft MultimodeII,Amjad Daoud,"1. Has put a public dataset on multi mode predictions
+2. Formulated a method to get ensemble of multi mode models to get better results"
+16,⚡⚡Lyft | EDA + Ensemble Top LB 📊,Shri Gopalakrishnan Kumar,"1. Reads in sample dataset and prints class distribution for it
+2. plots agent and ego dataset data in semantic and satellite images
+3. Usage of MapAPI for viewing entire city plto
+4. explaining what is inside scenes, frames etc
+5. method to converst data to df
+6. sample submission csv"
+17,coord,n3n7i,"1. Written some functions for converting from gedodetic to ecef frame and vice versa
+2. used pymap3d package for conversion
+3. but doesnt imply how its useful for use"
+18,Lyft- Basic EDA,satnam,1. L5kit visualisation notebook as such
+19,lyft-init,n3n7i,"1. used semData, Nelsa,  numba and other libraries
+2. written some custom functions for it
+3. got some nice visualisation otuput for the data 
+4. but still doesnt imply how its useful for us"
+20,motion,n3n7i,"1. used pysent and pysvg packages
+2. did some visualisation on rotation and translation matrices
+3. but doesnt imply how its useful for use"
+21,Ensembling Into One Prediction,FrankGuo,"1. How to ensemble many single mode predictions
+2. avaeraging output of 4 predictions to give ensemble result"
+22,Autonomous Predictor 2,Salman Ibne Eunus,"1. defined some utlitiy script for training and inferencing models
+2. multi mode prediction based on resnet architecture
+3. inference test data and submission using sample zarr dataset"
+23,n315a,n3n7i,"1. wrote class definition for Nelsa and mapI, gps to world conversion functions
+2. tried new features with dx,dy, centroid velocity,  something
+3. but doesnt imply how its useful for use"
+24,Pytorch baseline - Train,Peter,"1. Based on lyft l5kit examples
+2. created a lyft prediction class based on Resnet18 model 
+3. Training dataset loader iterator to train the dataset"
