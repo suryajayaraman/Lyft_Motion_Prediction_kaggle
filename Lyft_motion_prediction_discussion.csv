@@ -1,0 +1,96 @@
+Sno,Discussion topic,Brief,Link,Useful
+1,Building a Motion Prediction Model for Autonomous Vehicles,"1. Perception almost production ready
+2. Prediction and planning not so much
+3. BEV are useful that inputs and outputs are in same coordinate frame
+4. Explains basic workflow of inputs and outputs
+5. Separate TPU workflow available",Medium article by lyft l5 team,Yes
+2,Training Efficiency and Hardware Question,"1. Std training times are from 20h to 7 days
+2. creative game than HW power contest",,No
+3,What are contained in 'agents_mask'? How to read it ?,,kaggle discussion,Yes
+4,Question about target_availibilities.,"1. Target_availabilities are masks that are used when calculating the loss (and finally also the neg. log-likelihood). Not all targets (ground truths) are available, e.g. an agent was no longer visible for the AV.
+2. history_availabilities is the same thing for the past frames. Not all frames are available.",kaggle discussion,Yes
+5,Getting Satellite map coordinates from agent centroids,,kaggle discussion,Yes
+6,Whats the meaning of evaluation against 50% test set on LB?,"1.50% of scenes from test set are now used to calculate the public leaderboard while remaining 50% is used for the private leaderboard
+2. 71112/2 rows each used for public and private leaderboards",kaggle discussion,Yes
+7,what is the data in each image channel?,"1. input channels logic discussed, 
+2. for history num frames = 2, the data['image'] order is agent t, agent t-1, agent t-2, ego t, ego t-1, ego t-2, semantic map R, G, B",kaggle discussion,Yes
+8,Real time ridesharing policies,"1. https://arxiv.org/abs/2009.06051
+2. lyft and another company policies",kaggle discussion,Yes
+9,What are the definitions of the different coordinate systems?,"1. Details, info regarding all coordinate systems used in l5kit library",kaggle discussion,Yes
+10,TPUs never die,"1. setup TPU with pytorch
+2. Using efficientNet model for sample trainining and submission",kaggle discussion,Yes
+11,Question about timestamps,"1. Couldn't understand the start time, end time meaning ",kaggle discussion,Yes
+12,Error in create_chopped_dataset,"1.Chopped dataset function gives error
+2. This is because kaggle kernel doesnt allow to edit the input directory
+3. workaround is to create a temp folder and operate on that
+4. explained in public notebook",kaggle discussion,Yes
+13,Lyft's config file to visualise,link not opening,kaggle discussion,
+14,My Mom told me to read a 'awesome list' and a 'survey document' without diving deep into a topic,Resources and literature survey for papers,kaggle discussion,Yes
+15,Optical flow in motion prediction,"1. Using optical flow technique for motion prediction task
+2. Link to opencv docs page",kaggle discussion,No
+16,"What is ""ego_translation""?",1. Definition for common terms within competition,kaggle discussion,Yes
+17,Dataset format,"1. What data is stored within each variable of input dataset
+2. Tags within scenes, frames, tl_faces of zarr dataset",Dataset format l5kit page,Yes
+18,Self-driving datasets,1. Datasets related to SDC ,kaggle discussion,Yes
+19,Training is not required in Notebooks?,"1. Training can be done in google collab or offline and submission, weights can be loaded as dataset
+2. l5kit is to be installed with os.system pip commands",kaggle discussion,Yes
+20,Cannot install l5kit,1. links to official l5kit utility script and config files and imports,kaggle discussion,Yes
+21,What is the baseline score for GCS access?,"1. Baseline notebook, for the competition will be released soon
+2.print(KaggleDatasets().get_gcs_path(""lyft-motion-prediction-autonomous-vehicles""))
+It shows GCS address",kaggle discussion,Yes
+22,Lyft Mapping Techniques,1. brief explanation of the lyft mapping methodology and link to related medium post,kaggle discussion,Yes
+23,Pytorch XLA,"1. pytorch xla specific version needed to train with TPU
+2. cpu loading data has to be as much efficient to make full use of TPU
+3. More details can be found in discussion",kaggle discussion,Yes
+24,About autonomous vehicles,Links to Uber SDC overview post,Uber SDC overview,Yes
+25,Comparison of dataset provided here Vs provided in lyft's website,Lyft original dataset is not updated to include traffic lights ,kaggle discussion,Yes
+26,LearningRate Finder,"1. Cyclical update of learning rate instead of monotonically decreasing them
+2. arXiV paper attached ",kaggle discussion,Yes
+27,How are you Validating?,"1. validating model using small part / full part of validation set 
+2. strategies to validate and compare models",kaggle discussion,Yes
+28,Deep Conditional Generative Models (AKA Conditional Variational Auto-encoders),Innovative approach to the prediction task using the concept and kaggle implementation of the same,kaggle discussion,Yes
+29,Multi Mode Bagging : the main idea in a picture,"1. Simple introduction to multi mode submissions
+2. manipulation on sample dataset",kaggle discussion,Yes
+30,Frame and Timestamp,"1. At some instances, there is more than one frame at same timestamp in train dataset
+2. Possibly more than one AV could be used to record the data
+3. But agentID is unique given a time frame",kaggle discussion,Yes
+31,Competition Rules Question,"1. Train, inference can be done on separate notebook
+2. Only the csv can be submitted in the inference notebook
+3. For 'in the money' players, need to give code to get money, else out of LB",kaggle discussion,Yes
+32,Submission using submission.csv from training instead of making predictions,"1. no private test set availabe
+2. so direct csv submission is okay
+3. inference takes much longer, submission can be few seconds",kaggle discussion,Yes
+33,Useful resources,"1. link to arXiV paper
+2. papers with code link to lyft l5kit official page",kaggle discussion,Yes
+34,extra data on level5 website?,"1. kaggle full_train dataset for 70+GB dataset
+2. lyft website has 86GB data in total
+3. apart from kaggle_train there is kaggle_full_train",kaggle discussion,Yes
+35,Beyond L2 loss,"1. loss function for prediction tasks
+2. Medium post by lyft engineer on loss function",kaggle discussion,Yes
+36,Expected Error: Inaccuracy from Rasterization,"1. Rasterization [finite grid mapping kinda thing] can contribute significantly to the final loss 
+2. for pixel size of 0.5, it could be 0.78 and 0.18 for pixel size of 0.25
+3. The inaccuracy due to rotation and other factors, that will also add up
+4. targets are not rounded, semantic map is subpixel accuracy but boxrasterized istn",kaggle discussion,Yes
+37,Agent Lane Information,"1. ego lane, left lane information not available in l5kit dataset",kaggle discussion,Yes
+38,Clarification on our outputs,"1. what is the output size for multi mode models
+2. coords (np.ndarray): (num_example x (modes) x future_len x num_coords) meters ",kaggle disucssion,Yes
+39,Summary of the research paper,1. summary of the arXiV research paper,kaggle discussion,Yes
+40,Train using Google Colab (No Pro),"1. Entire process on google colab
+2. expalined in separate notebook",kaggle discussion,Yes
+41,@Host: About agent filter for test data,"1. agent filter value provided in train and validataion sets not in test set
+2. test set already has a mask that will take care of this",kaggle discussion,Yes
+42,Colab training,"1. GCS link to train on colab
+2. gooogle colab notebook shared in link",kaggle discussion,Yes
+43,Licenses - CC-BY-NC-SA-4.0,"1. license for using dataset
+2. which parts of dataset can be used for which purpose are explained in details",kaggle discussion,Yes
+44,"Motion Prediction of Traffic Actors: Papers, Surveys, Videos, etc.","1. link to papers, google i/o talks on behavour prediction tasks",kaggle discussion,Yes
+45,Running into a memory leak with the Agent Datase,"1. Memory error when running using the dataloader with ~1000 steps etc
+2. problem with l5kit zarr files and pytorch library etc",kaggle discussion,Yes
+46,@Host : Clarification regarding 4th Agent in Data Format description,"1. Cars, pedestrians, motorcyclist are the 3 labels apart from the 'unknown label'
+2. In test set we are asked to predict only 3 labels and not unknown
+3. unknown corresponds to labels which cannot be identified by the perception system",kaggle discussion,Yes
+47,GCP Credits,"1. baseline credit score of 82 with weights for the baseline model also provided
+2. you fill a form and get gcp credits",kaggle discussion,Yes
+48,List of Important Research Papers for Competition,Compilation of research papaers realted to the competition,kaggle discussion,Yes
+49,Is this the way how the autonomous car predicts motions?,"1. intuition behind BEV approach and its benefits
+2. Compared to end to end aprroaches",kaggle discussion,Yes
