@@ -43,3 +43,17 @@ Here Zarr dataset contains
 2. agents - centroid, extent, yaw, velocity, trackid, label_probabilities
 3. scenes 
 4. tl-faces 
+
+## lyft_motion_prediction_kernels
+
+1. Public notebooks in competition and their summary
+
+## Lyft_motion_prediction_discussion
+
+1. Important topics discussed in competition
+2. l5kit utility fix, l5kit library convention and understanding
+3. Links to research papers and articles
+4. Notable approaches to solving the problem - running pytorch with TPUs, GCS integration, baseline models etc
+
+
+
