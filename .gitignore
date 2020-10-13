@@ -2,7 +2,8 @@
 
 lyft-motion-prediction-autonomous-vehicles/
 
-
 submissions/Baseline_Resnet50/submission.csv
+
+submissions/Baseline_Resnet50/baseline_weights.pth
 
 l5kit-master/
