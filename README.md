@@ -55,5 +55,22 @@ Here Zarr dataset contains
 3. Links to research papers and articles
 4. Notable approaches to solving the problem - running pytorch with TPUs, GCS integration, baseline models etc
 
+## Resnet baseline
 
+1. At each instance, rasterized image data (containing ego and agent past trajectories, traffic light info, lane info etc) is passed through
+Resnet models (Resnet18, Resnet34, Resnet50)
+2. Final softmax layer is replaced by linear fully connected layer
+3. Negative log likelihood function is used as loss function 
+4. Adam optimizer with fixed learning rate used as of now
+3. Varying parameters include
+	- Number of history frames
+	- Raster image size
+	- pixel resolution 
 
+## LSTM baseline
+
+Since this is a sequence problem, I tried to implement LSTM based model. The approach is as follows: 
+
+![LSTM_baseline_idea](submissions/LSTM_Baseline/lstm baseline idea.jpg)
+
+Implementation can be found at this [kaggle kernel](https://www.kaggle.com/suryajrrafl/lstm-baseline)
