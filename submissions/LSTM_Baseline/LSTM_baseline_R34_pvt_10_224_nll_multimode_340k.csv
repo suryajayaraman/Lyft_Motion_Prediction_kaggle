@@ -1,4 +1,4 @@
-Instance,iterations,metrics (avg),elapsed_time (mins),Total elapsed time
+Instance,iteration,losses_train,elapsed_time (mins),Total elapsed time
 1,0,9114.376953125,0.1219324032,
 1,250,1030.1414918425,7.3679405332,
 1,500,698.7779597636,14.7221228878,
