@@ -4,6 +4,7 @@ lyft-motion-prediction-autonomous-vehicles/
 l5kit-master/
 l5kit-master/examples/visualisation/visualise_data.ipynb
 
+output/
 
 submissions/Baseline_Resnet50/submission.csv
 submissions/Baseline_Resnet50/baseline_weights.pth
@@ -13,8 +14,9 @@ submissions/Baseline_Resnet50/R50_pvt_224_nll_multimode_76k.pth
 submissions/Baseline_Resnet50/baseline_weights_Resnet50.pth
 
 
-submissions/Baseline_Resnet18/R18_pvt_10_224_nll_multimode_104k.pth
 submissions/Baseline_Resnet18/R18_pvt_10_300_mse_unimode_64k.pth
+submissions/Baseline_Resnet18/R18_pvt_10_224_nll_multimode_104k.pth
+submissions/Baseline_Resnet18/R18_pvt_10_224_nll_multimode_264k.pth
 submissions/Baseline_Resnet18/R18_pvt_15_224_nll_multimode_104k.pth
 
 
