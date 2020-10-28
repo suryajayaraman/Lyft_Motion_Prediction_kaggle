@@ -71,6 +71,12 @@ Resnet models (Resnet18, Resnet34, Resnet50)
 
 Since this is a sequence problem, I tried to implement LSTM based model. The approach is as follows: 
 
-![LSTM_baseline_idea](submissions/LSTM_Baseline/lstm baseline idea.jpg)
+[LSTM_baseline_idea](submissions/LSTM_Baseline/lstm baseline idea.jpg)
 
 Implementation can be found at this [kaggle kernel](https://www.kaggle.com/suryajrrafl/lstm-baseline)
+
+
+## Argoverse references
+
+Similar competition was held based on Argoverse Motion prediction dataset and the reference repo for that competition
+can be found at this link [Argoverse Git repo](https://github.com/jagjeet-singh/argoverse-forecasting)_
