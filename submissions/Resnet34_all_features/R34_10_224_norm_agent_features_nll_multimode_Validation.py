@@ -73,7 +73,7 @@ cfg = {
         'future_delta_time': 0.1,
         'model_name': "R34_pvt_10_224_norm_agent_features_nll_multimode",
         'lr': 1e-3 * 0.4,
-        'weight_path': "R34_pvt_10_224_norm_agent_features_nll_multimode_1344k.pth",
+        'weight_path': "R34_pvt_10_224_norm_agent_features_nll_multimode_2176k.pth",
         'train': True,
         'predict': False
     },
